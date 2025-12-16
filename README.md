@@ -1,4 +1,4 @@
-# BeTheBot - PoE Leveling & Crafting Guide
+# PathOfUseful - PoE Leveling & Crafting Guide
 
 An enhanced Path of Exile leveling guide with integrated crafting recommendations, vendor recipes, and personalized gem tracking.
 

@@ -213,7 +213,7 @@ export const useProgressStore = create<ProgressState>()(
       }
     }),
     {
-      name: 'bethebot-progress',
+      name: 'pathofuseful-progress',
       // Custom storage to handle Map serialization
       storage: {
         getItem: (name) => {

@@ -54,7 +54,7 @@ function App() {
             <div className="flex items-center gap-3">
               <BotIcon size={48} />
               <div>
-                <h1 className="text-3xl font-bold">BeTheBot</h1>
+                <h1 className="text-3xl font-bold">PathOfUseful</h1>
                 <p className="text-text-tertiary text-sm mt-1">
                   Forked from <a href="https://github.com/HeartofPhos/exile-leveling">exile-leveling</a> with added goodies
                 </p>

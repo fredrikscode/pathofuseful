@@ -7,7 +7,7 @@ Welcome! This guide will help you get up and running with your new project.
 Since you're on NixOS, all the tools you need are already configured in the `flake.nix` file.
 
 ```bash
-cd /home/fredrik/bethebot/poe-leveling-craft
+cd /home/fredrik/bethebot/pathofuseful
 nix develop
 ```
 

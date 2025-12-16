@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Default theme (current BeTheBot theme - Tailwind gray scale) */
+/* Default theme (current PathOfUseful theme - Tailwind gray scale) */
 :root,
 [data-theme="default"] {
   --bg-primary: #000000;        /* black */
