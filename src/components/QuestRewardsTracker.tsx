@@ -7,7 +7,7 @@ let gemsData: Record<string, { name: string; primary_attribute: string }> | null
 
 async function loadGemsData() {
   if (!gemsData) {
-    const response = await fetch('/src/data/gems.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}gems.json`);
     gemsData = await response.json();
   }
   return gemsData;

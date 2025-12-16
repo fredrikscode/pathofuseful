@@ -16,8 +16,8 @@ let gemData: any = null;
 async function loadData() {
   if (!questData) {
     const [questResponse, gemResponse] = await Promise.all([
-      fetch('/data/json/quests.json'),
-      fetch('/src/data/gems.json')
+      fetch(`${import.meta.env.BASE_URL}quests.json`),
+      fetch(`${import.meta.env.BASE_URL}gems.json`)
     ]);
     questData = await questResponse.json();
     gemData = await gemResponse.json();
