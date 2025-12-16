@@ -13,7 +13,7 @@ let gemsData: Record<string, {
 
 async function loadGemsData() {
   if (!gemsData) {
-    const response = await fetch('/src/data/gems.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}gems.json`);
     gemsData = await response.json();
   }
   return gemsData;
@@ -64,17 +64,17 @@ export interface PoBBuild {
 async function fetchPobbinCode(shortCode: string, username?: string): Promise<string> {
   try {
     // Try user-specific endpoint first if username is provided
-    let url = `/api/pobb/${shortCode}/raw`;
+    let url = `https://pobb.in/${shortCode}/raw`;
     if (username) {
       // For user builds, try the /u/username/code format
-      url = `/api/pobb/u/${username}/${shortCode}/raw`;
+      url = `https://pobb.in/u/${username}/${shortCode}/raw`;
     }
 
     const response = await fetch(url);
 
     // If user-specific endpoint fails, try the simple endpoint
     if (!response.ok && username) {
-      const fallbackResponse = await fetch(`/api/pobb/${shortCode}/raw`);
+      const fallbackResponse = await fetch(`https://pobb.in/${shortCode}/raw`);
       if (!fallbackResponse.ok) throw new Error('Failed to fetch pobb.in build');
       const text = await fallbackResponse.text();
       return text.trim();
