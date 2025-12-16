@@ -1,0 +1,79 @@
+#section Act 7
+{waypoint|2_7_town}
+➞ {enter|2_7_1}
+#ifdef LEAGUE_START
+    Find and take {quest_text|Silver Locket}
+        #sub Follow the road, look for the broken {waypoint}
+#endif
+➞ {enter|2_7_2}
+    #sub Follow the road
+{waypoint_get}
+➞ {enter|2_7_3}
+    #sub Go {dir|135}
+➞ {enter|2_7_4}
+    #sub Follow the road
+#ifdef LEAGUE_START
+    {trial}
+    Get recipe {crafting}
+#endif
+Find {generic|Sarcophagus} to next floor
+Find and take {quest_text|Maligaro's Map}
+{logout}
+{waypoint|2_7_2}
+➞ {enter|2_7_5_1}
+    #sub Go {dir|315}
+Get recipe {crafting}
+{waypoint_get}
+Activate {quest_text|Map Device} with {quest_text|Maligaro's Map}
+➞ {enter|2_7_5_map}
+➞ {arena|Maligaro's Workshop}, kill {kill|Maligaro, the Artist}, take {quest_text|Black Venom}
+    #sub Follow edges of the zone and cross bridges in the corners
+    #sub Typically bridges spawn in the opposite diagonal corners
+{logout}
+Hand in {quest|a7q2}
+#ifdef LEAGUE_START
+    Hand in {quest|a7q5}
+#endif
+{waypoint|2_7_5_1}
+Hand in {quest|a7q3}, take {quest_text|Obsidian Key}
+➞ {enter|2_7_5_2}
+    #sub Go in same direction as {waypoint}
+#ifdef LEAGUE_START
+    {trial}
+    Get recipe {crafting}
+#endif
+Open {generic|Secret Passage} ➞ {enter|2_7_6}
+➞ {enter|2_7_7}
+➞ {arena|The Forest Encampment}, kill {kill|Greust, Lord of the Forest}
+    #sub Go {dir|225}
+➞ {enter|2_7_8}
+{waypoint|2_7_town}
+Hand in {quest|a7q1}
+{waypoint|2_6_8}
+➞ {arena|Valley of the Fire Drinker}, kill {kill|Abberath, the Cloven One}
+    #sub Go down the ledge next to the road
+{portal|use}
+Hand in {quest|a6q7}
+{waypoint|2_7_8}
+➞ {enter|2_7_10}
+Get recipe {crafting}
+Find and take {quest_text|Kishara's Star}
+➞ {enter|2_7_11}
+Find {waypoint_get}
+{waypoint|2_7_8}
+➞ {enter|2_7_9}
+Find and take 7x{quest_text|Firefly}
+Get recipe {crafting}
+➞ {arena|Den of Despair}, kill {kill|Gruthkul, Mother of Despair}
+{portal|use}
+Hand in {quest|a7q9}
+Hand in {quest|a7q6}
+{waypoint|Labyrinth_Airlock}
+{ascend|cruel}
+Get {crafting|2_Labyrinth_boss_3}
+{waypoint|2_7_11}
+Hand in {quest|a7q7}
+➞ {enter|2_7_12_1}
+➞ {enter|2_7_12_2}
+Get recipe {crafting}
+➞ {arena|Arakaali's Web}, kill {kill|Arakaali, Spinner of Shadows}

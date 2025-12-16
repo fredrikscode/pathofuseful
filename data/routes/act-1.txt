@@ -1,0 +1,80 @@
+#section Act 1
+Find and kill {Hillock}
+{enter|1_1_town}
+Hand in {quest|a1q1}
+{enter|1_1_2}
+#ifdef LEAGUE_START
+    {waypoint_get}
+#endif
+{enter|1_1_3}
+Find 3x{quest_text|Glyph}
+    #sub Little streams connect the 3 Rhoa nests
+    #sub Usually form a triangle, but will rarely form a line
+{enter|1_1_4_1}
+#ifdef LEAGUE_START
+    {waypoint|1_1_2}
+    {enter|1_1_2a}
+    Find and kill {Hailrake}, take {quest_text|Medicine Chest}
+        #sub Go {dir|270}
+        #sub If you find a ledge, turn around and go {dir|90}
+        #sub Recommended Level: 4
+    {logout}
+    Hand in {quest|a1q4}
+    Hand in {quest|a1q5}
+#endif
+#ifndef LEAGUE_START
+    {waypoint|1_1_town}
+    Hand in {quest|a1q4}
+#endif
+{waypoint|1_1_4_1}
+Find bridge {portal|set}
+{enter|1_1_5}
+{enter|1_1_6}
+{enter|1_1_7_1}
+{waypoint|1_1_town}
+{portal|use}
+{enter|1_1_4_0}
+    #sub Go right of the bridge
+Find and kill {kill|The Dweller of the Deep}
+    #sub Search opposite the entrance
+    #sub Look for the large empty room
+{logout}
+Hand in {quest|a1q7}
+Hand in {quest|a1q2|a1q2b}
+{waypoint|1_1_7_1}
+#ifdef LEAGUE_START
+    {trial}
+        #sub Usually {dir|45}
+#endif
+{enter|1_1_7_2}
+#ifdef LEAGUE_START
+    Find {generic|Chemist's Strongbox}
+        #sub Look for map icon, access with nearby switch
+        #sub High chance for {generic|Quicksilver Flask}
+        #sub Vendor {generic|Quicksilver Flask} + {generic|Orb of Augmentation} + Normal {generic|Boots}
+        #sub Vendor {generic|Quicksilver Flask} + {generic|Orb of Augmentation} + Movement Speed {generic|Boots}
+#endif
+{arena|The Warden's Quarters}, kill {kill|Brutus, Lord Incarcerator}
+    #sub Recommended Level: 8
+{logout}
+Hand in {quest|a1q2|a1q2}
+{waypoint|1_1_8}
+{enter|1_1_9}
+    #sub Go down the ledge next to the road
+Find {area|1_1_9a}, place {portal|set}
+{enter|1_1_11_1}
+{waypoint|1_1_town}
+Take {portal|use}
+{enter|1_1_9a}
+Find {quest_text|Slave Girl}, take {quest_text|Allflame}
+    #sub Search opposite the entrance
+{enter|1_1_9}, kill {kill|Captain Fairgraves}
+{logout}
+Hand in {quest|a1q6}
+Hand in {quest|a1q3}
+{waypoint|1_1_11_1}
+{enter|1_1_11_2}
+    #sub Follow the water
+{arena|Merveil's Lair}, kill {kill|Merveil, the Siren}
+    #sub Follow the water
+    #sub Recommended Level: 12

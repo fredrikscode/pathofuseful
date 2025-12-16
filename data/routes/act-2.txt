@@ -1,0 +1,172 @@
+#section Act 2
+{enter|1_2_1}
+{enter|1_2_town}
+{enter|1_2_2}
+    #sub Go {dir|45}
+#ifdef LEAGUE_START
+    Find {area|1_2_2a}, {portal|set}
+#endif
+{enter|1_2_3}
+    #sub Follow the road
+#ifdef LEAGUE_START
+    {waypoint|1_2_town}
+        #sub Follow the road
+    {portal|use}
+    {enter|1_2_2a}
+    Find and kill {kill|The Great White Beast}
+    {logout}
+    Hand in {quest|a2q10}
+    {waypoint|1_2_3}
+#endif
+#ifndef LEAGUE_START
+    {waypoint_get}
+#endif
+{enter|1_2_6_1}
+    #sub Go {dir|315}
+{enter|1_2_6_2}
+    #sub Go in same direction as {waypoint}
+#ifdef LEAGUE_START
+    {trial}
+#endif
+Kill {kill|Fidelitas, the Mourning}, take {quest_text|Baleful Gem}
+    #sub Look for the long hallway
+    #sub Recommended Level: 14-15
+{logout}
+Hand in {quest|a2q6}
+{waypoint|1_2_3}
+{enter|1_2_15}
+    #sub Go {dir|135}
+{enter|1_2_5_1}
+    #sub Follow the road
+#ifdef LEAGUE_START
+    {trial}
+#endif
+{enter|1_2_5_2}
+Find {quest_text|Altar}, take {quest_text|Golden Hand}
+{logout}
+Hand in {quest|a2q5}
+{enter|1_2_7}
+    #sub Go {dir|225}
+{waypoint_get}
+    #sub Follow the road
+{enter|1_2_9}
+    #sub Follow the road
+{waypoint_get}
+    #sub Follow the road
+{enter|1_2_10}
+    #sub Search the side of road opposite {waypoint}
+{arena|The Weaver's Nest}, kill {kill|The Weaver}, take {quest_text|Maligaro's Spike}
+    #sub Try go {dir|270}, if it's blocked go {dir|45}
+    #sub Recommended Level: 16
+{logout}
+Hand in {quest|a2q4}
+#ifdef BANDIT_KILL
+    {waypoint|1_2_3}
+    {enter|1_2_4}
+        #sub Go {dir|45}
+    Kill {kill|Kraityn, Scarbearer}, take {quest_text|Kraityn's Amulet}
+        #sub Follow the road
+    {logout}
+    {waypoint|1_2_7}
+    {enter|1_2_12}
+        #sub Look for 2 pillars near {waypoint}, follow the trail
+    Find and kill {kill|Oak, Skullbreaker}, take {quest_text|Oak's Amulet}
+    {waypoint|1_2_9}
+        #sub Search opposite direction of the encampment entrance
+    Kill {kill|Alira Darktongue}, take {quest_text|Alira's Amulet}
+        #sub Go {dir|180} look for the torch touching the road
+        #sub Follow the trail in the direction of the torch
+    Kill {kill|Captain Arteri}
+        #sub Follow the road {dir|225}
+    Take {quest_text|Thaumetic Emblem}, activate {quest_text|Thaumetic Seal}
+    {logout}
+    Hand in {quest|a2q7}, take {quest_text|The Apex}
+    {waypoint|1_1_town}
+    Hand in {quest|a1q9}
+    {waypoint|1_2_12}
+    Poison the {quest_text|Tree Roots} {enter|1_2_11}
+#endif
+#ifdef BANDIT_ALIRA
+    {waypoint|1_2_3}
+    {enter|1_2_4}
+        #sub Go {dir|45}
+    Kill {kill|Kraityn, Scarbearer}, take {quest_text|Kraityn's Amulet}
+        #sub Follow the road
+    {logout}
+    {waypoint|1_2_7}
+    {enter|1_2_12}
+        #sub Look for 2 pillars near {waypoint}, follow the trail
+    Find and kill {kill|Oak, Skullbreaker}, take {quest_text|Oak's Amulet}
+    {waypoint|1_2_9}
+        #sub Search opposite direction of the encampment entrance
+    Help {kill|Alira Darktongue}, take {quest_text|The Apex}
+        #sub Go {dir|180} look for the torch touching the road
+        #sub Follow the trail in the direction of the torch
+    Kill {kill|Captain Arteri}
+        #sub Follow the road {dir|225}
+    Take {quest_text|Thaumetic Emblem}, activate {quest_text|Thaumetic Seal}
+    {logout}
+    {waypoint|1_1_town}
+    Hand in {quest|a1q9}
+    {waypoint|1_2_12}
+    Poison the {quest_text|Tree Roots} {enter|1_2_11}
+#endif
+#ifdef BANDIT_KRAITYN
+    {waypoint|1_2_7}
+    {enter|1_2_12}
+        #sub Look for 2 pillars near {waypoint}, follow the trail
+    Find and kill {kill|Oak, Skullbreaker}, take {quest_text|Oak's Amulet}
+    {waypoint|1_2_9}
+        #sub Search opposite direction of the encampment entrance
+    Kill {kill|Alira Darktongue}, take {quest_text|Alira's Amulet}
+        #sub Go {dir|180} look for the torch touching the road
+        #sub Follow the trail in the direction of the torch
+    Kill {kill|Captain Arteri}
+        #sub Follow the road {dir|225}
+    Take {quest_text|Thaumetic Emblem}, activate {quest_text|Thaumetic Seal}
+    {logout}
+    {waypoint|1_1_town}
+    Hand in {quest|a1q9}
+    {waypoint|1_2_3}
+    {enter|1_2_4}
+        #sub Go {dir|45}
+    Help {kill|Kraityn, Scarbearer}, take {quest_text|The Apex}
+        #sub Follow the road
+    {logout}
+    {waypoint|1_2_12}
+    Poison the {quest_text|Tree Roots} {enter|1_2_11}
+#endif
+#ifdef BANDIT_OAK
+    {waypoint|1_2_3}
+    {enter|1_2_4}
+        #sub Go {dir|45}
+    Kill {kill|Kraityn, Scarbearer}, take {quest_text|Kraityn's Amulet}
+        #sub Follow the road
+    {logout}
+    {waypoint|1_2_9}
+    Kill {kill|Alira Darktongue}, take {quest_text|Alira's Amulet}
+        #sub Go {dir|180} look for the torch touching the road
+        #sub Follow the trail in the direction of the torch
+    Kill {kill|Captain Arteri}
+        #sub Follow the road {dir|225}
+    Take {quest_text|Thaumetic Emblem}, activate {quest_text|Thaumetic Seal}
+    {logout}
+    {waypoint|1_1_town}
+    Hand in {quest|a1q9}
+    {waypoint|1_2_7}
+    {enter|1_2_12}
+        #sub Look for 2 pillars near {waypoint}, follow the trail
+    Find and help {kill|Oak, Skullbreaker}, take {quest_text|The Apex}
+    Poison the {quest_text|Tree Roots} {enter|1_2_11}
+        #sub Search opposite direction of the encampment entrance
+#endif
+{enter|1_2_8}
+    #sub S shape or L shape leads to exit
+{enter|1_2_14_2}
+Get recipe {crafting}
+{enter|1_2_14_3}
+{arena|Pyramid Apex}, kill {kill|Vaal Oversoul}
+    #sub First floor exit will be in one of the 3 corners
+    #sub Remaining floors will have the exit diagonally across from the entrance
+    #sub Recommended Level: 20-22
+Get recipe {crafting}

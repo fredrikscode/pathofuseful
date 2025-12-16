@@ -1,0 +1,57 @@
+#section Act 6
+➞ {enter|2_6_town}
+➞ {enter|2_6_1}
+Kill {kill|Everything}
+{logout}
+Hand in {quest|a6q4}
+➞ {enter|2_6_2}
+➞ {enter|2_6_4}
+Find and kill {kill|The Dishonoured Queen}, take {quest_text|Eye of Conquest}
+    #sub {dir|45} corner of area, normally by a house
+➞ {enter|2_6_5}
+➞ {arena|Tukohama's Keep}, kill {kill|Tukohama, Karui God of War}
+Get recipe {crafting}
+➞ {enter|2_6_6}
+    #sub Go {dir|0}
+➞ {enter|2_6_7_1}
+#ifdef LEAGUE_START
+    {trial}
+#endif
+Get recipe {crafting}
+➞ {enter|2_6_7_2}
+➞ {arena|Prison Rooftop}, kill {kill|Shavronne the Returned} & {kill|Reassembled Brutus}
+➞ {arena|The Warden's Chambers}
+Get recipe {crafting}
+➞ {enter|2_6_8}
+➞ {enter|2_6_9}
+    #sub Follow the road
+Get recipe {crafting}
+    #sub Look for the torch touching the road
+    #sub Follow the trail in the direction of the torch
+➞ {enter|2_6_10}
+    #sub Follow the road
+{waypoint_get}
+    #sub Follow the road
+➞ {enter|2_6_11}
+    #sub Look for 2 pillars near {waypoint}, follow the trail
+➞ {arena|The Spawning Ground}, kill {kill|Ryslatha, the Puppet Mistress}
+    #sub Go {dir|315}
+{logout}
+Hand in {quest|a6q3}
+Hand in {quest|a6q2}
+Hand in {quest|a6q6}
+{waypoint|2_6_10}
+➞ {enter|2_6_12}
+    #sub Follow the road until it ends
+    #sub Go {dir|135}
+➞ {enter|2_6_13}
+Take {quest_text|The Black Flag}
+➞ {enter|2_6_14}
+Get recipe {crafting}
+    #sub Follow the shore
+Complete {quest_text|Pillar Push}
+Light the {quest_text|Beacon}, throw in {quest_text|The Black Flag}
+Talk to {generic|Weylam Roth}, sail to {enter|2_6_15}
+➞ {arena|The Bring King's Throne}, kill {kill|Tsoagoth, The Brine King}
+{logout}
+Select {generic|Pantheons}

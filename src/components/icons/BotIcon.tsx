@@ -1,0 +1,38 @@
+interface Props {
+  className?: string;
+  size?: number;
+}
+
+export function BotIcon({ className = '', size = 32 }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Robot head */}
+      <rect x="8" y="10" width="16" height="14" rx="2" fill="#60a5fa" stroke="#3b82f6" strokeWidth="2"/>
+
+      {/* Antenna */}
+      <line x1="16" y1="10" x2="16" y2="6" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="16" cy="5" r="2" fill="#ef4444"/>
+
+      {/* Eyes */}
+      <circle cx="12" cy="15" r="2" fill="#1e293b"/>
+      <circle cx="20" cy="15" r="2" fill="#1e293b"/>
+
+      {/* Mouth/display */}
+      <rect x="11" y="20" width="10" height="2" rx="1" fill="#1e293b"/>
+
+      {/* Body */}
+      <rect x="10" y="24" width="12" height="6" rx="1" fill="#60a5fa" stroke="#3b82f6" strokeWidth="1.5"/>
+
+      {/* Arms */}
+      <line x1="8" y1="26" x2="4" y2="26" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="24" y1="26" x2="28" y2="26" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+}

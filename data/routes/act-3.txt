@@ -1,0 +1,100 @@
+#section Act 3
+➞ {enter|1_3_1}
+Get recipe {crafting}
+Help and talk to {generic|Clarissa}
+➞ {enter|1_3_town}
+➞ {enter|1_3_2}
+    #sub Go {dir|0}
+➞ {enter|1_3_3_1}
+    #sub Follow Stairs
+#ifdef LEAGUE_START
+    {trial}
+#endif
+Find and kill {kill|Piety}, take {quest_text|Tolman's Bracelet}
+Get recipe {crafting}
+{logout}
+Talk to {generic|Clarissa}, take {quest_text|Sewer Keys}
+Hand in {quest|a3q1}
+➞ {enter|1_3_2}
+    #sub Go {dir|0}
+➞ {enter|1_3_10_1}
+Find 1x{quest_text|Platinum Bust}
+{waypoint_get}
+Find 2x{quest_text|Platinum Bust}
+➞ {enter|1_3_5}
+{waypoint_get}
+#ifdef LEAGUE_START
+    ➞ {enter|1_3_6}
+        #sub Look around nearby
+    {trial}
+    Get recipe {crafting}
+#endif
+{logout}
+Hand in {quest|a3q11}
+{waypoint|1_3_5}
+➞ {enter|1_3_7}
+    #sub Search {dir|0}
+{waypoint_get}
+    #sub Go {dir|315}
+Find and take {quest_text|Ribbon Spool}
+    #sub Go {dir|225}
+➞ {enter|1_3_8_1}
+    #sub Go {dir|45}
+➞ {enter|1_3_8_2}
+➞ {arena|Eternal Laboratory}, get recipe {crafting}
+{waypoint|1_3_7}
+➞ {enter|1_3_9}
+    #sub Go {dir|315}
+Find and take {quest_text|Thaumetic Sulphite}
+{logout}
+{waypoint|1_3_8_2}
+Talk to {generic|Lady Dialla}
+Hand in {quest|a3q4}
+Hand in {quest|a3q5}, take {quest_text|Infernal Talc}
+{waypoint|1_3_10_1}
+Burn the {quest_text|Undying Blockage}
+Get recipe {crafting}
+➞ {enter|1_3_13}
+{waypoint_get}
+Kill {kill|General Gravicius}
+    #sub Go {dir|315}
+➞ {enter|1_3_14_1}
+➞ {enter|1_3_14_2}
+Find and kill {kill|Piety}, take {quest_text|Tower Key}
+    #sub Follow stairs that are going up
+    #sub At the fork in the road with wagons, go the route with 1 wagon, not 2
+Get recipe {crafting}
+{logout}
+Hand in {quest|a3q9}
+Hand in {quest|a3q8}
+{waypoint|1_3_13}
+➞ {enter|1_3_15}
+    #sub Go {dir|45}
+{waypoint_get}
+    #sub Follow the road
+#ifdef LEAGUE_START
+    {trial}
+        #sub Go {dir|0}
+    Get recipe {crafting}
+    {logout}
+    {waypoint|1_3_15}
+#endif
+#ifdef LIBRARY
+    ➞ {enter|1_3_17_1}
+        #sub Go {dir|315}
+    {waypoint_get}
+    Find {generic|Loose Candle} ➞ {enter|1_3_17_2}
+    Get recipe {crafting}
+        #sub Look for a candle in a narrow corridor
+    Find 4x{quest_text|Golden Page}
+    {logout}
+    {waypoint|1_3_17_1}
+        #sub Put currency needed to buy skill gems in inventory
+    Hand in {quest|a3q12}
+    {waypoint|1_3_15}
+#endif
+➞ {enter|1_3_18_1}
+➞ {enter|1_3_18_2}
+    #sub Stairs spawn in one of the corners
+➞ {arena|Tower Rooftop}, Kill {kill|Dominus, High Templar}
+    #sub Look for barricades
