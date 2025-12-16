@@ -63,18 +63,24 @@ export interface PoBBuild {
 
 async function fetchPobbinCode(shortCode: string, username?: string): Promise<string> {
   try {
+    // Use CORS proxy for production, direct API in dev
+    const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const corsProxy = isDev ? '' : 'https://corsproxy.io/?';
+
     // Try user-specific endpoint first if username is provided
-    let url = `https://pobb.in/${shortCode}/raw`;
+    let targetUrl = `https://pobb.in/${shortCode}/raw`;
     if (username) {
       // For user builds, try the /u/username/code format
-      url = `https://pobb.in/u/${username}/${shortCode}/raw`;
+      targetUrl = `https://pobb.in/u/${username}/${shortCode}/raw`;
     }
 
+    const url = isDev ? `/api/pobb/${shortCode}/raw` : `${corsProxy}${encodeURIComponent(targetUrl)}`;
     const response = await fetch(url);
 
     // If user-specific endpoint fails, try the simple endpoint
     if (!response.ok && username) {
-      const fallbackResponse = await fetch(`https://pobb.in/${shortCode}/raw`);
+      const fallbackUrl = isDev ? `/api/pobb/${shortCode}/raw` : `${corsProxy}${encodeURIComponent(`https://pobb.in/${shortCode}/raw`)}`;
+      const fallbackResponse = await fetch(fallbackUrl);
       if (!fallbackResponse.ok) throw new Error('Failed to fetch pobb.in build');
       const text = await fallbackResponse.text();
       return text.trim();
