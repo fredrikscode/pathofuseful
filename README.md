@@ -1,5 +1,7 @@
 # PathOfUseful - PoE Leveling & Crafting Guide
 
+Consider this in alpha state at the moment. Some things in the Act's can be wonky such as "Take {icon} Use portal" and so on. This will be fixed shortly.
+
 An enhanced Path of Exile leveling guide with integrated crafting recommendations, vendor recipes, and personalized gem tracking.
 
 Forked from [exile-leveling](https://github.com/HeartofPhos/exile-leveling) with additional features and improvements.
